@@ -20,6 +20,13 @@ function App() {
   function gotoFactories() {
     history.push('/factories')
   }
+  // function callBackFn () {
+// 
+// 
+// {...playerData, gold: playerData.gold + playerData.production}
+// 
+// }
+  // setInterval(() => { setPlayerData(playerIfno => palyer) }, 1000)
   return (
         <Switch> 
           <Route exact path="/factories">

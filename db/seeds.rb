@@ -21,13 +21,13 @@ end
 # factory3 = Factory.create(name: "Parking", cost: 1000, production: 20, user_id: user1.id)
 # factory4 = Factory.create(name: "Real Estate", cost: 5000, production: 40, user_id: user1.id)
 
-upgrade1 = Upgrade.create(name: "Airconditioner", description: "1.5x", price: 50, multiplier: 2)
+upgrade1 = Upgrade.create(name: "Airconditioner", description: "2x", price: 50, multiplier: 2)
 upgrade2 = Upgrade.create(name: "Water", description: "2x", price: 200, multiplier: 2)
 upgrade3 = Upgrade.create(name: "Electricity", description: "2x", price: 1000, multiplier: 2)
 upgrade4 = Upgrade.create(name: "Gas", description: "3x", price: 5000, multiplier: 3)
-upgrade4 = Upgrade.create(name: "Gas", description: "3x", price: 300000, multiplier: 4)
-upgrade4 = Upgrade.create(name: "Gas", description: "3x", price: 1000000, multiplier: 5)
-upgrade4 = Upgrade.create(name: "Gas", description: "3x", price: 100000000, multiplier: 6)
+upgrade4 = Upgrade.create(name: "Chef", description: "4x", price: 300000, multiplier: 4)
+upgrade4 = Upgrade.create(name: "Manager", description: "5x", price: 1000000, multiplier: 5)
+upgrade4 = Upgrade.create(name: "Security", description: "6x", price: 100000000, multiplier: 6)
 
 
 puts "✅ Done seeding!"

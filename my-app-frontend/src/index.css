@@ -48,6 +48,7 @@ code {
   background-color: yellow;
 }
 .cardText {
+  width: 100px;
   margin-left: 5px;
 }
 .user-nav {

@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 
 function FactoryCard({factory, playerData, setPlayerData}) {
     const [bought, setBought] = useState(true)
-    const [factoryId, setFactoryId] = useState()
-    
+
     useEffect(() => {
         fetch("http://localhost:9292/factory_upgrades")
         .then(res => res.json())
@@ -13,7 +12,6 @@ function FactoryCard({factory, playerData, setPlayerData}) {
         data.forEach(element => {
             if(element.factory_id === factory.id) {
                 setBought(element.bought)
-                setFactoryId(element.id)
             }
         })
     }
@@ -43,10 +41,12 @@ function FactoryCard({factory, playerData, setPlayerData}) {
         .then(res => res.json())
         .then(data => setPlayerData(data))
         setBought(!bought)
-        fetch(`http://localhost:9292/factory_upgrades/${factoryId}`, {
+        fetch(`http://localhost:9292/factory_upgrades/${factory.id}`)
+        .then(res => res.json())
+        .then(data => fetch(`http://localhost:9292/factory_upgrades/${data.id}`, {
             method: "DELETE",
             headers: {"Content-type": "application/json"},
-        })
+        }))
     }
     return (
       <div className="factory-card">
